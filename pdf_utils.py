@@ -96,7 +96,6 @@ def pdf_gen(p_dict: dict, size: tuple) -> None:
     show_popup("Saving PDF...", duration=2000)
     pages.save()
     try:
-        # Use xdg-open to open the PDF on Linux
         subprocess.Popen(["xdg-open", pdf_fp])
     except Exception as e:
         print(e)
